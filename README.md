@@ -25,12 +25,18 @@ docker exec -it counterapp_web_1 /bin/bash
 docker exec -it counterapp_db_1 mysql -uroot -prootpass
 ```
 
-## Reset the containers
-```bash
-docker-compose rm -
-```
-
 ## Run tests
 ```bash
 docker exec -it counterapp_web_1 python tests.py
+```
+
+## Start or stop containers
+```bash
+docker-compose start
+docker-compose stop
+```
+
+## Remove the containers
+```bash
+docker-compose rm -v
 ```
